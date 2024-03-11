@@ -1,0 +1,442 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Bebas Neue", sans-serif;
+    font-style: normal;
+    box-sizing: border-box;
+}
+
+.grillas{
+    display: grid;
+
+    grid-template-areas: "header"
+                          "main"
+                         "footer";
+}
+
+.header {
+    grid-area: header;
+    background-color: #412421d9;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    color: white;
+    .padreLogo{
+        width: 24%;
+        margin-left: 20px;
+        .logoHeader {
+            width: 100px;
+    }
+
+    }
+    .navegacionHeader{
+        width: 70%;
+        .listaNav {
+            list-style: none;
+            display: flex;
+            .listaItem{
+                font-size: 19px;
+                margin: 0px 40px;
+            }
+            .linkNav {
+                color: white;
+                &:hover{
+                    color: rgb(219, 108, 30);
+                }
+
+            }
+        }
+    }
+    
+}
+
+
+
+.textDecorationNone{
+    text-decoration: none;
+}
+
+
+.mainIndex{
+    grid-area: main;
+    .sectionPresentacion {
+        padding-left: 68%;
+        padding-top: 35px;
+        line-height: 1.5;
+        color: black;
+        background-image: url(../assets/img/fondo_titulo.jpg);
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 50vh;
+        .titulo{
+            font-size: 60px;
+        }
+        .textoPresentacion{
+            font-size: 20px;
+        }
+        .sabeNosotros{
+            color: black;
+            box-sizing: content-box;
+            display: inline-block;
+            background-color: rgba(0, 0, 0, 0.113);
+            width: 120px;
+            border: 2px solid black;
+            text-align: center;
+            padding: 5px;
+            margin-top: 30px;
+            &:hover{
+                background-color: rgba(240, 248, 255, 0.119);
+            }
+        }
+    }
+    .sectionTarjetas{
+        background-color: rgba(132, 61, 13, 0.142);
+        text-align: center;
+        height: 90vh;
+        width: 85%;
+        margin: 0 auto;
+        .tituloSectionTarjetas{
+            text-align: center;
+            font-size: 2rem;
+            padding: 30px 0px;
+        }
+        .contenedorTarjetas{
+            display: flex;
+            justify-content: space-around;
+            column-gap: 20px;
+            .tarjetas{
+                background-color: white;
+                width: 180px;
+                height: 200px;
+                padding: 20px;
+                margin: 20px;
+                text-align: center;
+                .imgTarjeta{
+                    width: 100%;
+                    height: 90%;
+                    object-fit: cover;
+                }
+            }
+        }
+        
+    }
+}
+
+
+
+
+
+.footer{
+    grid-area: footer;
+    display: flex;
+    background-color: black;
+    color: white;
+    justify-content: space-between;
+    h4{
+        margin-bottom: 5px;
+    }
+ 
+    .logoFooter{
+        margin-left: 20px;
+        width: 200px;
+    }
+    .grupoLiMap{
+        display: flex;
+        justify-content: space-between;
+        .listasFooter{
+            padding-top: 20px;
+            display: flex;
+            width: 200px;
+            justify-content: space-between;
+            h4{
+                font-size: 1.2rem;
+            }
+            .navFooterUno{
+    
+                .listaNavFooter {
+                    list-style: none;
+                    text-align: center;
+                    .listaItemFooter{
+        
+                    }
+                    .linkNavFooter {
+                        text-decoration: none;
+                        color: rgb(190, 190, 190);
+                        &:hover{
+                            color: white;
+                        }
+                    }
+                }
+            }
+            .navFooterDos{
+    
+                .listaNavFooter {
+                    text-align: center;
+                    list-style: none;
+                    .listaItemFooter{
+        
+                    }
+                    .linkNavFooter {
+                        text-decoration: none;
+                        color: rgb(190, 190, 190);
+                        &:hover{
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+        .mapaFooter{
+            padding-top: 20px;
+            .tituloMapa{
+                text-align: center;
+                font-size: 1.5rem;
+            }
+        }
+    }
+    
+    .social{
+
+        display: flex;
+        flex-direction: column;
+      
+        margin-right: 30px;
+        .emailFooter{
+            padding-top: 20px;
+            text-align: center;
+            font-size: 1.2rem;
+            form{
+                display: flex;
+
+                input[type="email"] {
+                    padding: 0 15px;
+                    max-width: 100%;
+                    border: 2px solid rgba(110, 110, 110, .2);
+                    width: 100%; 
+                    height: 42px;
+                    border-radius: 0;
+                    background-color: transparent;
+                    box-shadow: none;
+                    vertical-align: middle;
+                    font-size: 14px;
+                }
+                input[type="submit"]{
+                    padding: 12px 20px;
+                    font-size: 13px;
+                    line-height: 18px;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    outline: 0;
+                    border: 0 solid transparent;
+                    vertical-align: middle;
+                    text-align: center;
+                    text-transform: uppercase;
+                    letter-spacing: .3px;
+                    font-weight: 600;
+                    &:hover{
+                        background-color: rgb(219, 108, 30);
+                    }
+                }
+            }
+        }
+        .redesSociales{
+            padding-top: 16px;
+            padding-bottom: 16px;
+            font-size: 1.3rem;
+            text-align: center;
+            .iconosRedes{
+                display: flex;
+                justify-content: space-evenly;
+                .fa-brands{
+                    color: white;
+                    font-size: 2rem;
+                    &:hover{
+                        color: rgb(219, 108, 30);
+                    }
+                }
+            }
+            }
+        }
+    }
+
+
+    /*Responsive Mobile*/
+
+    @media screen and (max-width: 768px){
+        .grillas{
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+        }
+        /*Estilos del Header*/
+        .header {
+            width: 100%;
+            flex-direction: column;
+            .padreLogo{
+                width: initial;
+                margin-left: initial;
+                .logoHeader {
+                    width: 100px;
+                }
+            }
+            .navegacionHeader{
+                width: initial;
+                .listaNav {
+                    .listaItem{
+                        font-size: 1rem;
+                        margin: 0px 20px;
+                    }
+                }
+            }
+            
+        }
+        /*Estilos del Main Index*/
+        .mainIndex{
+            
+            .sectionPresentacion {
+                height: 40vh;
+                padding-left: 10px;
+                padding-top: 15px;
+                .titulo{
+                    font-size: 2.5rem;
+                }
+                .textoPresentacion{
+                    font-size: 1.1rem;
+                }
+            }
+            .sectionTarjetas{
+                height: initial;
+
+                .tituloSectionTarjetas{
+                    text-align: center;
+                    font-size: 1.8rem;
+
+                }
+                .contenedorTarjetas{
+                    flex-wrap: wrap ;
+                    justify-content: center;
+                    .tarjetas{
+                        padding: 10px;
+                        margin: 5px;
+                        width: 150px;
+                        height: 170px;
+                        .imgTarjeta{
+                            width: 100%;
+                            height: 90%;
+                            object-fit: cover;
+                        }
+                    }
+                }
+                
+            }
+        }
+        /*Estilos de Footer*/
+
+        .footer{
+            h4{
+                font-size: 1rem;
+            }
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            .logoFooter{
+
+                width: 100px;
+            }
+            .grupoLiMap{
+                display: flex;
+                width: 80%;
+                gap: 20px;
+                .listasFooter{
+                    display: flex;
+                    width: 50%;
+                    justify-content: space-around;
+                    .navFooterUno{
+                        h4{
+                            font-size: 0.87rem;
+                        }
+                        .listaNavFooter {
+                            .listaItemFooter{
+                                font-size: 0.7rem;
+                                }
+                            }
+                        }
+                    }
+                    .navFooterDos{
+                        h4{
+                            font-size: 0.87rem;
+                        }
+                        .listaNavFooter {
+                            .listaItemFooter{
+                                font-size: 0.7rem;
+                            }
+                        }
+                    }
+                    .mapaFooter{
+                        .tituloMapa{
+                            font-size: 0.87rem;
+                        }
+                        .map{
+                            width: 100px;
+                            height: 50px;
+                        }
+                    }
+            }
+            
+                .social{
+                    margin-right: 18px;
+                    form{
+                        display: flex;
+        
+                        input[type="email"] {
+                            padding: 0 10px;
+                            max-width: 100%;
+                            border: 2px solid rgba(110, 110, 110, .2);
+                            width: 100%; 
+                            height: 35px;
+                            border-radius: 0;
+                            background-color: transparent;
+                            box-shadow: none;
+                            vertical-align: middle;
+                            font-size: 14px;
+                        }
+                        input[type="submit"]{
+                            padding: 12px 20px;
+                            font-size: 13px;
+                            line-height: 18px;
+                            display: inline-flex;
+                            align-items: center;
+                            justify-content: center;
+                            outline: 0;
+                            border: 0 solid transparent;
+                            vertical-align: middle;
+                            text-align: center;
+                            text-transform: uppercase;
+                            letter-spacing: .3px;
+                            font-weight: 600;
+                        }
+                    }
+                    }
+                    .redesSociales{
+                        padding-top: 10px;
+                        padding-bottom: 10px;
+                        font-size: 0.87rem;
+                        text-align: center;
+                        .iconosRedes{
+                            display: flex;
+                            justify-content: space-evenly;
+                            .fa-brands{
+                                color: white;
+                                font-size: 1rem;
+                            }
+                         }
+                        }
+                    }
+            }
+    }
