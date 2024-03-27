@@ -1,0 +1,135 @@
+@mixin tarjetas($bgColor, $width, $height, $pd, $mg){
+    background-color: $bgColor;
+    width: $width;
+    height: $height;
+    padding: $pd;
+    margin: $mg;
+}
+
+
+/*Main Index*/
+.mainIndex{
+    background-color: $color-principal;
+    background: linear-gradient(to right top, #5a4752, #5f414c, #643b43, #683538, #68312a, #703528, #773a25, #7d4022, #914d2c, #a55b36, #ba6941, #cf774c);
+    .imgFondo{
+        background-image:  url(../assets/img/fondo_titulo.jpg);
+        background-size: cover;
+        background-position: center;
+        height: 50vh;
+        .colorEncontranos{
+            color: #232323;
+            border-color: #232323;
+            &:hover{
+                color: #232323;
+                background-color: #2323234e;
+                border-color: #232323;
+                }
+        }
+    }
+    .carousel-item{
+        height: 70vh;
+        h5{
+            font-size: 1.6rem;
+        }
+    }
+    .carousel-dark .carousel-caption{
+        color: rgb(229, 229, 229);
+    }
+    .carouselPers{
+        height: 80vh;
+        .carousel-dark .carousel-caption{
+            color: rgb(0, 0, 0);
+        }
+    }
+    .sectionTarjetas{
+        height: 90vh;
+        .tituloSectionTarjetas{
+            padding: 30px 0px;
+        }
+        .contenedorTarjetas{
+            column-gap: 20px;
+            .tarjetas{
+                @include tarjetas(white, 180px, 200px, 20px, 20px);   
+                .imgTarjeta{
+                    width: 100%;
+                    height: 90%;
+                    object-fit: cover;
+                    transition: all 0.3s ease-in;
+                    &:hover{
+                        transform: scale(0.9);
+                    }
+                }
+            }
+        }
+    }
+    
+
+    .productosTar{
+        height: 150vh;
+    }
+    .page-link{
+        color: black;
+    }    
+}
+
+@media screen and (max-width: 768px){
+    .mainIndex{
+        .carousel-item{
+            height: 30vh;
+            h5{
+                font-size: 0.3rem;
+            }
+        }
+    
+        .sectionTarjetas{
+            height: initial;
+        
+            .tituloSectionTarjetas{
+                padding: 30px 0px;
+            }
+            .contenedorTarjetas{
+                flex-wrap: wrap ;
+                justify-content: center;
+                align-items: center;
+    
+                .tarjetas{
+                    font-size: 0.5rem;
+                    background-color: white;
+                    padding: 10px;
+                    margin: 5px;
+                    width: 150px;
+                    height: 170px;
+                    .imgTarjeta{
+                        width: 100%;
+                        height: 90%;
+                        object-fit: cover;
+                        transition: all 0.3s ease-in;
+                        &:hover{
+                            transform: scale(0.9);
+                        }
+                    }
+                }
+            }
+        }
+    }   
+}
+
+
+/*Main Nosotros*/
+.mainColor{
+    background-color: $color-principal;
+        background: linear-gradient(to right top, #5a4752, #5f414c, #643b43, #683538, #68312a, #703528, #773a25, #7d4022, #914d2c, #a55b36, #ba6941, #cf774c);
+}
+
+
+/*Main Contacto*/
+.mainContacto{
+    height: 70vh;
+    background-color: $color-secundario;
+}
+@media screen and (max-width: 768px){
+    .mainContacto{
+        height: auto;
+        
+    }
+}

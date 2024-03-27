@@ -1,0 +1,67 @@
+ /*Footer*/
+
+$estilosTipografia:(
+    colorW: #ffffff,
+    colorB: #000000,
+    tamañoTitulo: 1.2rem,
+);
+
+ footer{
+    background-color: black;
+    color: map-get($estilosTipografia, colorW);
+    .logoFooter{
+        width: 200px;
+    }
+    .listasFooter{
+        width: 200px;
+        .listaNavFooter{
+            list-style: none;
+            .linkNavFooter {
+                text-decoration: none;
+                color: rgb(190, 190, 190);
+                &:hover{
+                    color: map-get($estilosTipografia, colorW);
+                }
+            }
+        }
+        h4{
+            font-size: map-get($estilosTipografia, tamañoTitulo);
+            text-align: center;
+        }
+    }
+    form{
+        display: flex;
+        h4{
+            font-size: map-get($estilosTipografia, tamañoTitulo);
+        }
+    
+        input[type="email"] {
+            padding: 0 15px;
+            max-width: 100%;
+            border: 2px solid rgba(110, 110, 110, .2);
+            width: 100%; 
+            height: 42px;
+            border-radius: 0;
+            background-color: transparent;
+            box-shadow: none;
+            vertical-align: middle;
+        }
+        input[type="submit"]{
+            padding: 12px 20px;
+            line-height: 18px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            outline: 0;
+            border: 0 solid transparent;
+            vertical-align: middle;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: .3px;
+            font-weight: 600;
+            &:hover{
+                background-color: rgb(219, 108, 30);
+            }
+        }
+    }
+}
