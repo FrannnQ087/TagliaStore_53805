@@ -137,6 +137,17 @@ body {
     height: auto;
   }
 }
+/*Main Error*/
+.mainError {
+  height: 70vh;
+  background-color: rgb(226, 202, 179);
+}
+
+@media screen and (max-width: 768px) {
+  .mainError {
+    height: auto;
+  }
+}
 /*Footer*/
 footer {
   bottom: 0;
